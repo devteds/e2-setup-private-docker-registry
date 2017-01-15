@@ -1,0 +1,22 @@
+version: '2'
+services:
+  revp:
+    image: nginx:latest
+    volumes:
+      - "/root/nginx-root:/usr/share/nginx/html:ro"
+      - "/root/nginx.conf:/etc/nginx/nginx.conf:ro"
+      - "/root/certs:/usr/share/certs:ro"
+      - "/root/auth/htpasswd:/etc/nginx/.htpasswd:ro"
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - reg
+    links:
+      - reg
+  reg:
+    image: registry
+    expose:
+      - 5000
+    volumes:
+      - "/root/reg-data:/var/lib/registry:rw"
