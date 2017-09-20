@@ -2,7 +2,7 @@
 
 Devteds [Episode #2](https://devteds.com/episodes/2-setup-private-docker-registry-secure-with-ssl-password)
 
-Learn how to setup a private secured docker registry on cloud.
+Learn how to setup a private secure docker registry in the cloud.
 
 [Episode video link](https://youtu.be/KMldBtbJ4qI)
 
