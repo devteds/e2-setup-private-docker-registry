@@ -43,7 +43,7 @@ docker-machine scp index.conf my-private-registry:/root/nginx-root/
 
 # create an index.html file and,
 docker-machine ssh my-private-registry mkdir /root/nginx-root
-docker-machine scp index.conf my-private-registry:/root/nginx-root/
+docker-machine scp nginx.conf my-private-registry:/root/nginx-root/
 
 # create docker-compose.yml for nginx service. and,
 eval $(docker-machine env my-private-registry)
